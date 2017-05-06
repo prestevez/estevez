@@ -1,7 +1,7 @@
 Package: estevez
 Title: A Collection of Useful Functions for Personal Use
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
+Authors@R: person("Patricio", "Estévez-Soto", email = "patricio.estevez.14@ucl.ac.uk", role = c("aut", "cre"))
 Description: It is a series of functions that I tend to use in different
     projects.
 Depends: R (>= 3.3.1)
