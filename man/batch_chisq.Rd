@@ -12,7 +12,7 @@ batch_chisq(df, DV, IV, ...)
 \item{DV}{A column name containing a factor variable, will be the columns
 of the chi-sq contingecy tables.}
 
-\item{IV}{A vector of column names of \code{length(IV) >= 1} contaiing
+\item{IV}{A vector of column names of \code{length(IV) >= 1} containing
 factor variables.}
 
 \item{...}{pases options to the child functions, e.g. the number of
