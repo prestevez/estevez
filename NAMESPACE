@@ -2,5 +2,6 @@
 
 export(add_stars)
 export(batch_chisq)
+export(chisq_tb)
 export(chisq_wrap)
 export(cramersv)
