@@ -13,3 +13,4 @@ Imports:
     knitr,
     lazyeval,
     Hmisc
+RoxygenNote: 6.0.1
