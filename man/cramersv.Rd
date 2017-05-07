@@ -15,6 +15,8 @@ This function calculates Cramer's V from an object created by the
 }
 \examples{
 cramersv(x)
+
+cramersv(chisq.test(enve_test$extortion_victim, enve_test$size))
 }
 \keyword{association,}
 \keyword{chi-square}

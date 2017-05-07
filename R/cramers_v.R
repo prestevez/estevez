@@ -7,6 +7,8 @@
 #' @export
 #' @examples
 #' cramersv(x)
+#'
+#' cramersv(chisq.test(enve_test$extortion_victim, enve_test$size))
 
 cramersv = function(x)
 {

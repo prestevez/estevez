@@ -22,12 +22,13 @@ of the Chi-square test, specifically that there is at least
 one cell with less than 5 expected counts.
 }
 \examples{
-chisq_wrap(x, y)
+chisq_wrap(enve_test$extortion_victim, enve_test$size)
 
 # x is a matrix or an object that can be coerced into a matrix
-chisq_wrap(x)
+t <- table(enve_test$extortion_victim, enve_test$size)
+chisq_wrap(t)
 
 # Pass number of replicates to be used if simulation is required
-chisq_wrap(x, B = 1000)
+chisq_wrap(t, B = 1000)
 }
 \keyword{chi-square}
