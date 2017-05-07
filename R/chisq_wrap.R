@@ -22,7 +22,7 @@
 
 chisq_wrap <- function(x, y = NULL, ...)
 {
-    tc <- tryCatch(chisq.test(x, y = NULL), warning = function(x) x)
+    tc <- tryCatch(chisq.test(x, y), warning = function(x) x)
 
     simul <- FALSE
 
@@ -31,10 +31,9 @@ chisq_wrap <- function(x, y = NULL, ...)
         simul <- TRUE
     }
 
-    test <- chisq.test(x, y = NULL, simulate.p.value = simul, ...)
+    test <- chisq.test(x, y, simulate.p.value = simul, ...)
 
     return(test)
 }
 
-#DNAME <- deparse(substitute(x))
 
