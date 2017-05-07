@@ -22,7 +22,8 @@ chisq_tb <- function(x, stars = TRUE, ...)
     p.value <- lapply(x, function(y) y$p.value)
     CV <- lapply(x, cramersv)
 
-    results <- as.data.frame(cbind(Chisq, CV, df, p.value))
+    results <- as.data.frame(cbind("Chi-sq" = Chisq,
+                                   "Cramer's V" = CV, df, p.value))
 
     if(stars == TRUE)
     {
