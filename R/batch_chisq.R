@@ -7,7 +7,7 @@
 #' @param df The data frame that contains the \code{IV} and \code{DV}
 #' @param DV A column name containing a factor variable, will be the columns
 #'     of the chi-sq contingecy tables.
-#' @param IV A vector of column names of \code{length(IV) >= 1} contaiing
+#' @param IV A vector of column names of \code{length(IV) >= 1} containing
 #'     factor variables.
 #' @param ... pases options to the child functions, e.g. the number of
 #'     replicates to use in simulation \code{B = 1000}.
