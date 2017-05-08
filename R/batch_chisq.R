@@ -14,7 +14,7 @@
 #' @keywords chi-squared
 #' @export
 #' @examples
-#' batch_chisq(df = enve_test, DV = "extortion_victim",
+#' batch_chisq(df = testdata, DV = "extortion_victim",
 #'             IV = c("bribe_victim", "size"))
 
 batch_chisq <- function(df, DV, IV, ...)
