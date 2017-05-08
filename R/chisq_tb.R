@@ -10,7 +10,7 @@
 #' @keywords chi-squared test, table
 #' @export
 #' @examples
-#' b <- batch_chisq(enve_test, DV = "extortion_victim",
+#' b <- batch_chisq(testdata, DV = "extortion_victim",
 #'                   IV = c("bribe_victim", "size"))
 #' chisq_tb(b)
 
