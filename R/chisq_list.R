@@ -1,3 +1,26 @@
+#' List of contingency tables
+#'
+#' A convenience function to output a list of contingency tables
+#' from a list of chi-square tests, as those created by
+#' \code{\link{batch_chisq}}.
+#' @param x A list of chi-squared tests.
+#' @param option Allows specifying the type of continency table
+#'     to be produced. The options are:
+#'     - \code{observed} counts, default option.
+#'     - \code{expected} counts.
+#'     - \code{ratio} of observed to expected counts.
+#'     - \code{percent} row percentages.
+#' @param print_option Allows specifying the output format, using
+#'     the \code{\link{kable}} from package \code{\link{knitr}}. The
+#'     default option \code{none} produces a list of matrix objects.
+#' @keywords chi-squared, contingency table
+#' @export
+#' @examples
+#' b <- batch_chisq(df = testdata, DV = "extortion_victim",
+#'             IV = c("bribe_victim", "size"))
+#'
+#' chisq_list(b, option = "ratio", print_option = "pandoc")
+
 
 chisq_list <- function(x, option = c("observed", "expected", "ratio",
                         "percent"), print_option = c("none",
@@ -55,6 +78,3 @@ chisq_list <- function(x, option = c("observed", "expected", "ratio",
     }
     return(results)
 }
-
-
-
