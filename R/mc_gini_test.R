@@ -96,7 +96,7 @@ mc_gini_test <- function(x, data = NULL, reps = 2000, keep_reps = FALSE,
 
     if(keep_reps == TRUE)
     {
-        results$mc_gini <- mc_gini
+        results$keep_reps <- mc_reps
     }
 
     # Return results
