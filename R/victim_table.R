@@ -29,8 +29,7 @@ victim_table <- function(x, data = NULL, print_option = c("none",
     if(print_option[1] %in% c("markdown", "pandoc", "latex", "html"))
     {
         legend <- "Victimisation distribution of "
-        cap <- paste(legend, xname, sep = "")
-        cap <- paste(cap, ".", sep = "")
+        cap <- paste(legend, xname, ".", sep = "")
 
         results <- knitr::kable(distri, format = print_option[1], caption = cap,
                                 digits = 3)
