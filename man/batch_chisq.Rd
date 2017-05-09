@@ -24,7 +24,7 @@ of Chi-square tests of association between one DV and a vector of
 at least 1 IV.
 }
 \examples{
-batch_chisq(df = enve_test, DV = "extortion_victim",
+batch_chisq(df = testdata, DV = "extortion_victim",
             IV = c("bribe_victim", "size"))
 }
 \keyword{chi-squared}

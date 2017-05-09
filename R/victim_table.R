@@ -1,5 +1,18 @@
 #' Vicimisation distribution table
 #'
+#' A function to create distribution tables of victimisation counts.
+#' @param x A numeric or intenger vector of event counts. If
+#'     \code{data} is provided, x is the character label of the column
+#'     of event counts.
+#' @param data A data frame.
+#' @param print_options Provides the option to print out results as
+#'     a table formatted by \code{\link{kable}} from the \code{knitr} package.
+#' @keywords distribution
+#' @export
+#' @examples
+#' victim_table(testdata$extortions)
+#'
+#' victim_table("extortions", data = testdata, print_option = "pandoc")
 
 victim_table <- function(x, data = NULL, print_option = c("none",
                           "markdown", "pandoc", "latex", "html"))
