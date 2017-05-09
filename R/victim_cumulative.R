@@ -19,7 +19,7 @@ victim_cumulative <- function(data)
 
     columns <- sapply(data[,inds], intfun)
     columns <- as.data.frame(columns)
-    names(columns) <- c("Targets", "Victims", "Incidents")
+    names(columns) <- c("All targets", "Victims", "Incidents")
     columns <- cbind(Events = data[,1], columns)
 
     return(columns)
