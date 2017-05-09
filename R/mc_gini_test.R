@@ -5,6 +5,20 @@
 #' under the specified family (Poisson or nbinom) and compares the
 #' observed Gini with the MC confidence interval.
 #' There is an option to generate a plot of the values and critical region.
+#' @param x A numeric or intenger vector of event counts. If
+#'     \code{data} is provided, x is the character label of the column
+#'     of event counts.
+#' @param data A data frame.
+#' @param reps The number of Monte Carlo replicates
+#' @param keep_reps Logical option to keep the vector of Gini Index statistics
+#'     for the Monte Carlo replications.
+#' @param family Family distribution for the Null Hypothesis.
+#' @param plots Logical indicating whether to generate a plot of the test.
+#' @keywords Monte Carlo, simulation, poisson, negative binomial, inequality,
+#'     Gini Index
+#' @export
+#' @examples
+#' mc_gini_test("extortions", data = testdata, plots = TRUE, family = "poisson")
 
 
 mc_gini_test <- function(x, data = NULL, reps = 2000, keep_reps = FALSE,
@@ -54,7 +68,8 @@ mc_gini_test <- function(x, data = NULL, reps = 2000, keep_reps = FALSE,
     mc_test <- obs_gini < mc_confint[1] | obs_gini > mc_confint[2]
     names(mc_test) <- "Alternative Hypothesis"
 
-    results <- list(stat = obs_gini,
+    results <- list(DV = xname,
+                    stat = obs_gini,
                     mc_mean = mc_mean,
                     mc_confint = mc_confint,
                     reps = reps,
