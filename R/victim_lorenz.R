@@ -3,11 +3,20 @@
 #' A wrapper for a series of functions to generate Lorenz plots from
 #' vectors of counts of victimisation incidents. Includes option to include
 #' Expected counts under Poisson or Negative Binomial expected counts.
-#'
+#' @param x a vector of counts or the name of a column of counts in data
+#' @param data a data frame
+#' @param family an option based on \code{\link{gini_test}} that
+#'     adds curves for the expected counts under the null hypothesis
+#'     of a poisson or a negative binomial distribution using an aggregate
+#'     Monte Carlo simulation with 500 replicates
+#' @param reps passes option of replicates to \code{\link{gini_test}}
+#' @keywords Lorenz Curve, Monte Carlo, Count Data
+#' @examples
+#' victim_lorenz("bribes", data = testdata, family = "poisson")
 #'
 
 victim_lorenz <- function(x, data = NULL, family = c("none", "poisson",
-                                                     "nbinom"))
+                                                     "nbinom"), reps = 500)
 {
     if(is.data.frame(data)) {xvar <- data[,x]; xname <- x }
     else {xvar <- x; xname <- deparse(substitute(x))}
@@ -27,7 +36,7 @@ victim_lorenz <- function(x, data = NULL, family = c("none", "poisson",
     if(family[1] %in% c("poisson", "nbinom"))
     {
         gini_test <- mc_gini_test(x = x, data = data, family = family[1],
-                                  keep_reps = TRUE, plots = FALSE, reps = 500)
+                                  keep_reps = TRUE, plots = FALSE, reps = reps)
         all_expected <- unlist(gini_test$keep_reps)
         expected_table <- victim_table(all_expected, print_option = "none")
         expected_cumper <- victim_cumulative(expected_table)
