@@ -6,7 +6,7 @@
 #' @param x a numeric or integer vector.
 #' @keywords factor, as.factor, count data
 #' @export
-#' @example
+#' @examples
 #' fac_relevel(testdata$extortions)
 
 fac_relevel <- function(x)

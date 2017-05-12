@@ -14,6 +14,9 @@ A helper function that turns a vector of count into factor data.
 If there are more than 5 levels in the factor, it aggregates those
 above the fifth level to a single level.
 }
+\examples{
+fac_relevel(testdata$extortions)
+}
 \keyword{as.factor,}
 \keyword{count}
 \keyword{data}
