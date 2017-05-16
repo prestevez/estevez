@@ -10,6 +10,7 @@
 #'     of a poisson or a negative binomial distribution using an aggregate
 #'     Monte Carlo simulation with 500 replicates
 #' @param reps passes option of replicates to \code{\link{gini_test}}
+#' @export
 #' @keywords Lorenz Curve, Monte Carlo, Count Data
 #' @examples
 #' victim_lorenz("bribes", data = testdata, family = "poisson")
