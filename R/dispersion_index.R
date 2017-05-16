@@ -26,6 +26,8 @@ dispersion_index <- function(x, data = NULL)
     n <- length(xvar)
     df <- n-1
     names(df) <- "df"
+    ratio <- v/mu
+    names(ratio) <- "var/mu"
     index <- ((df)*v)/mu
     names(index) <- "I"
     pval <- pchisq(index, df, lower.tail=FALSE)
@@ -33,5 +35,5 @@ dispersion_index <- function(x, data = NULL)
     pv95 <- qchisq(.95, df)
     names(pv95) <- "95% Chi-sq"
 
-    return(c(index, pval, df, pv95))
+    return(c(mu, v, ratio, index, pval, df, pv95))
 }
