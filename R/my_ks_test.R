@@ -15,7 +15,7 @@
 #' @examples
 #' my_ks_test(x = "extortions", data = testdata, family = "poisson")
 
-my_ks_test <- function(x, data = NULL, simulate.p.value = TRUE, B = 2000,
+my_ks_test <- function(x, data = NULL, simulate.p.value = TRUE, B = 500,
                        alternative = "greater",
                        family = c("poisson", "nbinom"))
 {
