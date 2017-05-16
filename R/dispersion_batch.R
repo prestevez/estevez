@@ -16,12 +16,6 @@
 dispersion_batch <- function(x, data,  print_option = c("none",
                         "markdown", "pandoc", "latex", "html"))
 {
-    for(i in 1:length(x))
-    {
-        if(!class(data[,x[i]]) %in% c("numeric", "integer"))
-        {stop(paste(x[i], " is not numeric or integer", sep =""))}
-    }
-
     results_list <- lapply(x, dispersion_index, data = data)
     names(results_list) <- x
 
