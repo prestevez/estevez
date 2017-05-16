@@ -73,8 +73,7 @@ mc_gini_test <- function(x, data = NULL, reps = 2000, keep_reps = FALSE,
                     mc_mean = mc_mean,
                     mc_confint = mc_confint,
                     reps = reps,
-                    mc_test = mc_test,
-                    mc_gini = mc_gini)
+                    mc_test = mc_test)
 
     # Plot
     if(plots==TRUE)
