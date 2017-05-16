@@ -54,7 +54,7 @@ mc_gini_test <- function(x, data = NULL, reps = 2000, keep_reps = FALSE,
     mc_gini <- unlist(lapply(mc_reps, function(x) ineq::ineq(x, type="Gini")))
 
     # 95% confidence interval
-    mc_confint <- quantile(mc_gini, c(0.025, 0.975))
+    mc_confint <- quantile(mc_gini, c(0.025, 0.975), na.rm = TRUE)
     names(mc_confint) <- c("MC 2.5%", "MC 97.5%")
 
     # MC mean
