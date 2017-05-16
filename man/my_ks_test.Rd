@@ -4,7 +4,7 @@
 \alias{my_ks_test}
 \title{My Kolmogorov-Smirnov Tests}
 \usage{
-my_ks_test(x, data = NULL, simulate.p.value = TRUE, B = 2000,
+my_ks_test(x, data = NULL, simulate.p.value = TRUE, B = 500,
   alternative = "greater", family = c("poisson", "nbinom"))
 }
 \arguments{
