@@ -4,19 +4,21 @@
 #' If there are more than 5 levels in the factor, it aggregates those
 #' above the fifth level to a single level.
 #' @param x a numeric or integer vector.
+#' @param max_levels offers the option to control the minimum
+#'     numer of levels in the new factor
 #' @keywords factor, as.factor, count data
 #' @export
 #' @examples
 #' fac_relevel(testdata$extortions)
 
-fac_relevel <- function(x)
+fac_relevel <- function(x, min_levels = 5)
 {
     if(!class(x) %in% c("numeric", "integer"))
     {stop("x is not numeric or integer")}
 
     fac <- factor(x)
 
-    if(nlevels(fac) > 5)
+    if(nlevels(fac) > min_levels)
     {
         levels(fac)[6:nlevels(fac)] <- rep("5+", nlevels(fac) - 5)
     }

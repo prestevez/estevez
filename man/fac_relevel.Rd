@@ -4,10 +4,13 @@
 \alias{fac_relevel}
 \title{Auto releviling function for factors of count data}
 \usage{
-fac_relevel(x)
+fac_relevel(x, min_levels = 5)
 }
 \arguments{
 \item{x}{a numeric or integer vector.}
+
+\item{max_levels}{offers the option to control the minimum
+numer of levels in the new factor}
 }
 \description{
 A helper function that turns a vector of count into factor data.
