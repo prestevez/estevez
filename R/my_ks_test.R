@@ -32,7 +32,7 @@ my_ks_test <- function(x, data = NULL, simulate.p.value = TRUE, B = 500,
     results <- dgof::ks.test(xvar, y = ecdf(all_expected),
                              sumilate.p.value = simulate.p.value,
                              B = B, alternative = alternative)
-    results$data.name <- xname
+    results$data.name <- paste0(xname, " vs. ", family[1])
 
     return(results)
 
