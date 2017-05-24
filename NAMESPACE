@@ -2,6 +2,7 @@
 
 export(add_stars)
 export(batch_chisq)
+export(chisq_count)
 export(chisq_list)
 export(chisq_tb)
 export(chisq_wrap)
