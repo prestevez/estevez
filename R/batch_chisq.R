@@ -44,6 +44,8 @@ batch_chisq <- function(df, DV, IV, ...)
 
         chsqtst <- chisq_wrap(freqtable, ...)
 
+        chsqtst$data.name <- paste0(DV, " vs. ", IV[i])
+
         results[[IV[i]]] <- chsqtst
 
     }
