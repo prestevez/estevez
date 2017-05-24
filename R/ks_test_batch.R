@@ -22,9 +22,9 @@ ks_test_batch <- function(x, data,  print_option = c("none",
                                         unlist(results_table$statistic))
     new_results_table$`p-value` <- unlist(results_table$p.value)
 
-    results_table <- new_results_table
+    rownames(new_results_table) <- results_table$data.name
 
-    rownames(results_table) <- x
+    results_table <- new_results_table
 
     if(print_option[1] %in% c("markdown", "pandoc", "latex", "html"))
     {

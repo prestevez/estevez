@@ -54,6 +54,7 @@ chisq_count <- function(x, data = NULL, B = 500,
     obs_tab <- table(fac_xvar, dnn = xname)
 
     test <- chisq_wrap(obs_tab, p = exp_probs, B=B)
+    test$data.name <- paste0(xname, " vs. ", family[1])
 
 
     return(test)
