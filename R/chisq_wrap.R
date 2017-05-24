@@ -23,7 +23,7 @@
 
 chisq_wrap <- function(x, y = NULL, ...)
 {
-    tc <- tryCatch(chisq.test(x, y), warning = function(x) x)
+    tc <- tryCatch(chisq.test(x, y, ...), warning = function(x) x)
 
     simul <- FALSE
 
