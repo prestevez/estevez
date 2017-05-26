@@ -26,6 +26,10 @@ chisq_list <- function(x, option = c("observed", "expected", "ratio",
                         "percent"), print_option = c("none",
                          "markdown", "pandoc", "latex", "html"))
 {
+    nullind <- which(unlist(lapply(x, is.null)))
+
+    if(length(nullind) != 0) {x <- x[-nullind]}
+
     obs <- lapply(x, function(x) as.matrix(get("observed", x)))
     exp <- lapply(x, function(x) as.matrix(get("expected", x)))
 
