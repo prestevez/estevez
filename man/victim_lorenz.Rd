@@ -5,7 +5,7 @@
 \title{Lorenz curves for victimisation distributions}
 \usage{
 victim_lorenz(x, data = NULL, family = c("none", "poisson", "nbinom"),
-  reps = 500)
+  reps = 500, by_var = NULL)
 }
 \arguments{
 \item{x}{a vector of counts or the name of a column of counts in data}
