@@ -70,7 +70,7 @@ chisq_list <- function(x, option = c("observed", "expected", "ratio",
         results <- mapply(function(x, y)
         {
             knitr::kable(x, format=print_option[1], caption = y, digits = 3)
-        }, results, caps)
+        }, results, caps, SIMPLIFY = FALSE)
     }
     if(!print_option[1] %in% c("none", "markdown", "pandoc", "latex", "html"))
     {
