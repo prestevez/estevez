@@ -17,6 +17,10 @@
 
 chisq_tb <- function(x, stars = TRUE, ...)
 {
+    nullind <- which(unlist(lapply(x, is.null)))
+
+    if(length(nullind) != 0) {x <- x[-nullind]}
+
     Chisq <- lapply(x, function(y) y$statistic)
     df <- lapply(x, function(y) y$parameter)
     p.value <- lapply(x, function(y) y$p.value)
