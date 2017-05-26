@@ -9,6 +9,7 @@
 #'     adds curves for the expected counts under the null hypothesis
 #'     of a poisson or a negative binomial distribution using an aggregate
 #'     Monte Carlo simulation with 500 replicates
+#' @param by_var the name of a factor variable in the data frame
 #' @param reps passes option of replicates to \code{\link{gini_test}}
 #' @export
 #' @keywords Lorenz Curve, Monte Carlo, Count Data

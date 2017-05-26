@@ -18,6 +18,8 @@ of a poisson or a negative binomial distribution using an aggregate
 Monte Carlo simulation with 500 replicates}
 
 \item{reps}{passes option of replicates to \code{\link{gini_test}}}
+
+\item{by_var}{the name of a factor variable in the data frame}
 }
 \description{
 A wrapper for a series of functions to generate Lorenz plots from
