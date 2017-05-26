@@ -2,11 +2,11 @@ Package: vicarp
 Title: Victimisation Analysis and Reporting
 Version: 0.0.0.9000
 Authors@R: person("Patricio", "Estévez-Soto", email = "patricio.estevez.14@ucl.ac.uk", role = c("aut", "cre"))
-Description: A convienience package to facilitate analysis and reporting of 
-    victimisation data analysis. Though developed for this purpose,  
+Description: A convienience package to facilitate analysis and reporting of
+    victimisation data analysis. Though developed for this purpose,
     functions can be applied to different fields where the analytical needs
     are similar (e.g., studying prevalence, count data distributions).
-Depends: R (>= 3.3.1)
+Depends: R (>= 3.0.0)
 License: MIT
 Encoding: UTF-8
 LazyData: true
