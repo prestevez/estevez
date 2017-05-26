@@ -4,7 +4,7 @@
 \alias{fac_relevel}
 \title{Auto releviling function for factors of count data}
 \usage{
-fac_relevel(x, min_levels = 5)
+fac_relevel(x, min_levels = 6)
 }
 \arguments{
 \item{x}{a numeric or integer vector.}

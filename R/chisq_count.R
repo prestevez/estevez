@@ -39,12 +39,12 @@ chisq_count <- function(x, data = NULL, B = 500,
     {
         if(nlevels(fac_exp) > nlevels(fac_xvar))
         {
-            min_levels <- nlevels(fac_xvar)
-            fac_exp <- fac_relevel(all_exp, min_levels = min_levels)
+            min_level <- nlevels(fac_xvar)
+            fac_exp <- fac_relevel(all_exp, min_levels = min_level)
         } else
         {
-            min_levels <- nlevels(fac_exp)
-            fac_xvar <- fac_relevel(xvar, min_levels = min_levels)
+            min_level <- nlevels(fac_exp)
+            fac_xvar <- fac_relevel(xvar, min_levels = min_level)
         }
     }
 

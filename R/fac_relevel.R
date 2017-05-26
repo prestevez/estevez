@@ -11,7 +11,7 @@
 #' @examples
 #' fac_relevel(testdata$extortions)
 
-fac_relevel <- function(x, min_levels = 5)
+fac_relevel <- function(x, min_levels = 6)
 {
     if(!class(x) %in% c("numeric", "integer"))
     {stop("x is not numeric or integer")}
@@ -20,8 +20,8 @@ fac_relevel <- function(x, min_levels = 5)
 
     if(nlevels(fac) > min_levels)
     {
-        levels(fac)[(min_levels+1):nlevels(fac)] <-
-            rep(paste0(min_levels, "+"), nlevels(fac) - min_levels)
+        levels(fac)[(min_levels):nlevels(fac)] <-
+            rep(paste0(min_levels-1, "+"), nlevels(fac) - (min_levels-1))
     }
 
     return(fac)
