@@ -14,5 +14,7 @@ Imports:
     dplyr,
     knitr,
     lazyeval,
-    Hmisc
+    Hmisc,
+    ineq,
+    dgof
 RoxygenNote: 6.0.1
