@@ -1,4 +1,4 @@
-Package: vicarp
+Package: victim
 Title: Victimisation Analysis and Reporting
 Version: 0.0.0.9000
 Authors@R: person("Patricio", "Estévez-Soto", email = "patricio.estevez.14@ucl.ac.uk", role = c("aut", "cre"))
@@ -16,5 +16,6 @@ Imports:
     lazyeval,
     Hmisc,
     ineq,
-    dgof
+    dgof,
+    Formula
 RoxygenNote: 6.0.1

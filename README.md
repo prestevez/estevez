@@ -1,4 +1,4 @@
-# vicarp: Victimisation Analysis and Reporting
+# victim: Victimisation Analysis and Reporting
 
 A convienience package to facilitate analysis and reporting of victimisation data analysis. Though developed for this purpose, functions can be applied to different fields where the analytical needs are similar (e.g., studying prevalence, count data distributions).
 
