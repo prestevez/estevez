@@ -21,6 +21,7 @@ victim_cumulative <- function(data)
     columns <- as.data.frame(columns)
     names(columns) <- c("All targets", "Victims", "Incidents")
     columns <- cbind(Events = data[,1], columns)
+    columns <- rbind(columns, rep(0, ncol(columns)))
 
     return(columns)
 }
