@@ -32,7 +32,7 @@ get_glmmadmb <- function(mod)
 
     if(!is.null(mod$random))
     {
-        var_j <- as.numeric(mod$S)^2
+        var_j <- as.numeric(mod$S)
         results$var_j <- var_j
 
         ICC <- var_j/(var_j + alpha)
