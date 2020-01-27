@@ -14,12 +14,12 @@
 
 victim_cumulative <- function(data)
 {
-    inds <- 5:7
+    inds <- 5:8
     intfun <- function(x) rev(cumsum(rev(x)))
 
     columns <- sapply(data[,inds], intfun)
     columns <- as.data.frame(columns)
-    names(columns) <- c("All targets", "Victims", "Incidents")
+    names(columns) <- c("All targets", "Victims", "Incidents", "Repeats")
     columns <- cbind(Events = data[,1], columns)
     columns <- rbind(columns, rep(0, ncol(columns)))
 
