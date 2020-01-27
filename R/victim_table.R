@@ -34,6 +34,7 @@ victim_table <- function(x, data = NULL, print_option = c("none",
     distri$"Victim_%"[2:nrow(distri)] <-
         prop.table(distri[2:nrow(distri),"Prevalence"]) * 100
     distri$"Incident_%" <- prop.table(distri$Incidence) * 100
+    distri$"Repeats_%" <- prop.table(distri$Repeats) * 100
 
     distri[1,"Incidence"] <- NA
     distri[1:2,"Repeats"] <- NA
