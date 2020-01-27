@@ -39,6 +39,7 @@ victim_table <- function(x, data = NULL, print_option = c("none",
     distri[1,"Incidence"] <- NA
     distri[1:2,"Repeats"] <- NA
     distri[1,"Incident_%"] <- NA
+    distri[1:2,"Repeats_%"] <- NA
 
     if(print_option[1] %in% c("markdown", "pandoc", "latex", "html"))
     {
