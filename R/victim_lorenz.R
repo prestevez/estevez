@@ -48,7 +48,7 @@ victim_lorenz <- function(x, data = NULL, family = c("none", "poisson",
             expected_cumper[is.na(expected_cumper)] <- 100
             expected_cumper$type <- family[1]
 
-            gg_expected <- reshape2::melt(expected_cumper[,-1],
+            gg_expected <- reshape2::melt(expected_cumper[,c(-1,-5)],
                                           id.vars = c("Incidents", "type"),
                                           variable.name = "pop",
                                           value.name = "Targets")
