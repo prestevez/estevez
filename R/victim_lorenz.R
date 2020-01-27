@@ -30,11 +30,11 @@ victim_lorenz <- function(x, data = NULL, family = c("none", "poisson",
     if(is.null(by_var))
     {
         v_table <- victim_table(x = x, data = data, print_option = "none")
-        v_cum <- victim_cumulative(v_table)[,-4]
+        v_cum <- victim_cumulative(v_table)
         v_cum[is.na(v_cum)] <- 100
         v_cum$type <- "Observed"
 
-        gg_v_cum <- reshape2::melt(v_cum[,-1], id.vars = c("Incidents", "type"),
+        gg_v_cum <- reshape2::melt(v_cum[,c(-1,-5)], id.vars = c("Incidents", "type"),
                                    variable.name = "pop",
                                    value.name = "Targets")
 
@@ -73,7 +73,7 @@ victim_lorenz <- function(x, data = NULL, family = c("none", "poisson",
 
         v_cum$type <- "Observed"
 
-        gg_v_cum <- reshape2::melt(v_cum[,c(-1,-4)],
+        gg_v_cum <- reshape2::melt(v_cum[,c(-1,-5)],
                                    id.vars = c("Incidents", "type", by_name),
                                    variable.name = "pop",
                                    value.name = "Targets")
