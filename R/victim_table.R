@@ -36,11 +36,12 @@ victim_table <- function(x, data = NULL, print_option = c("none",
     distri$"Incident_%" <- prop.table(distri$Incidence) * 100
 
     distri[1,"Incidence"] <- NA
-    distri[1:2,"Repeats"] <- NA
+    distri[1:2,"Repeats"] <- 0
     distri[1,"Incident_%"] <- NA
   
     distri$"Repeats_%" <- prop.table(distri$Repeats) * 100
     distri[1:2,"Repeats_%"] <- NA
+    distri[1:2,"Repeats"] <- NA
 
     if(print_option[1] %in% c("markdown", "pandoc", "latex", "html"))
     {
